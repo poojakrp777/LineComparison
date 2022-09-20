@@ -8,40 +8,27 @@ namespace LineComparison
 {
     internal class Program
     {
-        public class Pair
-        {
-            public int first, second;
-
-            public Pair(int first, int second)
-            {
-                this.first = first;
-                this.second = second;
-            }
-        }
-
-        // Function to find the line given two points
-        static void lineFromPoints(Pair P, Pair Q)
-        {
-            int a = Q.second - P.second;
-            int b = P.first - Q.first;
-            int c = a * (P.first) + b * (P.second);
-
-            if (b < 0)
-            {
-                Console.WriteLine("The line passing through points P and Q is: "+ a + "x - " + b + "y = " + c);
-            }
-            else
-            {
-                Console.WriteLine("The line passing through points P and Q is: "+ a + "x + " + b + "y = " + c);
-            }
-        }
-
-        // Driver code
         public static void Main(String[] args)
         {
-            Pair P = new Pair(3, 2);
-            Pair Q = new Pair(2, 6);
-            lineFromPoints(P, Q);
+            Console.WriteLine("Welcome to line comparison");
+            Console.WriteLine("Enter Value of : X1");
+            //string value converted to integer
+            int X1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Value of : X2");
+            int X2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Value of : Y1");
+            int Y1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Value of : Y2");
+            int Y2 = Convert.ToInt32(Console.ReadLine());
+
+            //using double to get square root value in double decimal points
+            double length = Math.Sqrt((Math.Pow((X2 - X1), 2) + Math.Pow((Y2 - Y1), 2)));
+            Console.WriteLine("Length of the line is :" + length);
+
+            Console.ReadLine();
         }
     }
 }
