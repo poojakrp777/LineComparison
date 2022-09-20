@@ -27,7 +27,9 @@ namespace LineComparison
             int Y2 = Convert.ToInt32(Console.ReadLine());
 
             //2st part line no 2 : L2
+
             Console.WriteLine("\t\tEnter values for Line No 2: ");
+
 
             Console.WriteLine("Enter Value of : X3");
             int X3 = Convert.ToInt32(Console.ReadLine());
@@ -56,17 +58,15 @@ namespace LineComparison
             {
                 Console.WriteLine("BOTH LINES ARE EQUAL");
             }
+
+            else if (Length1 > Length2)
+            {
+                Console.WriteLine("Length1 IS GREATER THAN Length2");
+            }
             else
             {
-                Console.WriteLine("BOTH LINES ARE NOT EQUAL");
+                Console.WriteLine("Length1 IS LESS THAN Length2");
             }
-
-            //using double to get square root value in double decimal points
-
-            double length1 = Math.Sqrt((Math.Pow((X2 - X1), 2) + Math.Pow((Y2 - Y1), 2)));
-            Console.WriteLine("Length of the line is :" + length1);
-
-            Console.ReadLine();
         }
     }
 }
